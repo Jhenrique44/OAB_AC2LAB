@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-Ac1labApplication<ac1lab>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.example.ac1lab.Ac1labApplication",
+            "projectName": "ac1lab",
+            "args": ""
+        }
+    ]
+}
