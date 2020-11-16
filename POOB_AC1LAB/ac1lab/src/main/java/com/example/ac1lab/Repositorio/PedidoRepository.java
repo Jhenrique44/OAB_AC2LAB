@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class PedidoRepository {
     private List<Pedido> pedidos;
-    private int code = 0;
+    private static int code = 0;
 
     @PostConstruct
     public void criarPedidos(){
@@ -23,7 +23,7 @@ public class PedidoRepository {
         p1.setCodigo(code++);
         p1.setDescricao("Sabão");
         p1.setValor(50);
-        p1.setDatapedido("10-09-2020");
+        //////p1.setDatapedido("f443543");
 
         pedidos = new ArrayList<Pedido>();
         pedidos.add(p1);
@@ -62,15 +62,18 @@ public class PedidoRepository {
             aux.setCliente(pedido.getCliente());
             aux.setDescricao(pedido.getDescricao());
             aux.setValor(pedido.getValor());
-            aux.setDatapedido(pedido.getDatapedido());
-        
+            return aux;
         }
-        return aux;
+        else{
+            return
+        }
             
     }
-    public void remove(Pedido pedido){
+    public void remove(Pedido ped){
 
-        pedidos.remove(pedido);
+        if(getPedidoCodigo(ped.getCodigo()) != null){
+            pedidos.remove(ped);
+        }
 
     }
 }
